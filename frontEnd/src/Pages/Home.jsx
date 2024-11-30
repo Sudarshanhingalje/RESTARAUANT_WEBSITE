@@ -5,8 +5,9 @@ import Qualities from '../components/Qualities'
 import Menu from '../components/Menu'
 import WhoAreWe from '../components/WhoWeAre'
 import ArihatTeam from '../components/ArihantTeam'
-import Reservation from '../components/ForReservatiion'
-import Footer from '../components/Footer'
+import Reservation from '../components/ForReservation'
+
+import ContactUs from './contact'
 
 
 const Home = () => {
@@ -19,7 +20,9 @@ const Home = () => {
     <WhoAreWe/>
     <ArihatTeam/>
     <Reservation/>
-    <Footer/>
+    <ContactUs/>
+
+
     </>
   )
 }

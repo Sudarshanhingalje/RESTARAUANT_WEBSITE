@@ -15,15 +15,16 @@ const Success = () => {
         }
         return preCount - 1;
       });
-    }, 1000);
+    }, 1200);
     return () => clearInterval(timeoutId);
   }, [navigate]);
 
   return (
     <>
-      <section className="notFound">
+      <section className="success">
         <div className="container">
-          <img src="/sandwich.png" alt="success" />
+          <img src="/burger.jpg" alt="success" />
+          <h1>your reservation is confirmed</h1>
           <h1>Redirecting to Home in {countdown} seconds...</h1>
           <Link to={"/"}>
             Back to Home <HiOutlineArrowNarrowRight />

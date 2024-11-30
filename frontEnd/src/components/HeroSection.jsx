@@ -1,38 +1,73 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "./Navbar";
-import "../style/HeroSection.css";
+import "../App.css";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const HeroSection = () => {
   return (
     <section className="heroSection" id="heroSection">
       <Navbar />
-      <div className="container">
-        <div className="banner">
-          <div className="largeBox">
-            <h1 className="title">Sweet</h1>
-          </div>
-          <div className="combined_boxes">
-            <div className="imageBox">
-              <img src="./hero1.png" alt="hero" />
-            </div>
-            <div className="textAndLogo">
-              <div className="textWithSvg">
-                <h1 className="title">Food</h1>
-                <h1 className="title dishes_title">Dishes</h1>
-                <img src="./threelines.svg" alt="threelines" />
-              </div>
-              <img className="logo" src="./logo.png" alt="logo" />
-            </div>
-          </div>
+
+      <section className="container">
+        <div className="content__container">
+          <h1>
+            Welcome to <br />
+            <span className="heading__1">Arihant foods</span>
+            <br />
+            <span className="heading__2">Explore our Food Adventure.</span>
+            <br />
+          </h1>
+          <p>
+            Discover an exquisite fusion of flavors and ambiance that promises
+            to elevate your dining experience. Indulge in our globally-inspired
+            menu, crafted with care and passion. Join us and embark on a journey
+            of culinary delight. Your table awaits.
+          </p>
+          <form action="#">
+            <input type="text" placeholder="Send Us A Message" />
+            <button type="submit">Send</button>
+          </form>
         </div>
-        <div className="banner">
-          <div className="imageBox">
-            <img src="/hero2.png" alt="hero" />
-          </div>
-          <h1 className="title dishes_title">Dishes</h1>
-        </div>
-      </div>
+
+        <Swiper
+          direction="horizontal"
+          loop={true}
+          speed={5000}
+          pagination={{ clickable: true }}
+          navigation={true}
+          autoplay={{
+            delay: 1000,
+            disableOnInteraction: false,
+          }}
+        >
+          <SwiperSlide>
+            <div className="image__container">
+              <img src="./img1.png" alt="" />
+              <img src="./img2.png" alt="" />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="image__container">
+              <img src="./img3.png" alt="" />
+              <img src="./img4.png" alt="" />
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="image__container">
+              <img src="./img5.png" alt="" />
+              <img src="./img6.png" alt="" />
+            </div>
+          </SwiperSlide>
+
+        </Swiper>
+      </section>
     </section>
+
   );
 };
 
